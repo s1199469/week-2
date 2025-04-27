@@ -1,0 +1,8 @@
+#cloud-config
+users:
+  - name: ${student}
+    ssh_authorized_keys:
+      - ssh-ed25519 ${AAAAC3NzaC1lZDI1NTE5AAAAIIylQUg7LocW6rkaVfZR4MoX8hErDTeuh98B46GrAUn2 student@Ubuntu2404ServerGold-mcm34801-293628110524}
+    sudo: ['ALL=(ALL) NOPASSWORD:ALL''']
+    groups: sudo
+    shell: /bin/bash

@@ -15,13 +15,6 @@ resource "esxi_guest" "VM" {
   virtual_network = var.virtual_network
   }
   ovf_source = "https://cloud-images.ubuntu.com/releases/24.04/release/ubuntu-24.04-server-cloudimg-amd64.ova"
-guestinfo = {
-"metadata"          = filebase64("metadata.yaml")
-"metadata.encoding" = "base64"
-"userdata"          = filebase64("userdata.yaml")
-"userdata.encoding" = "base64"
-}
-
 }
 #
 #  Outputs are a great way to output information about your apply.
