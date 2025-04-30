@@ -33,5 +33,8 @@ variable "disk_store" {
 }
 
 variable "vm_hostname" {
-  default = "vmtest2704"
+  default = "vmtest3004"
+}
+variable "vm_user" {
+  default = "admin"
 }

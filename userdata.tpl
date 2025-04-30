@@ -7,5 +7,7 @@ users:
       - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHLj0QW8VQfxx9mUMdZevTxPif3fw0VavPP1noc4kgBc student@devhost
     shell: /bin/bash
 runcmd:
-  - hostnamectl set hostname ${HOSTNAME}
-  - echo ${HELLO}
+  - hostnamectl set-hostname ${HOSTNAME}
+  - data >/root/cloudinit.log 
+  - echo ${HELLO} >>/root/cloudinit.log
+
