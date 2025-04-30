@@ -11,14 +11,11 @@ provider "esxi" {
 #    template_file is a great way to pass variables to
 #    cloud-init
 data "template_file" "Default" {
-  # template = file("userdata.tpl")
-  template = file(var.vm_userconfigfile)
+  template = file("userdata.tpl")
   vars = {
     HOSTNAME = var.vm_hostname
-    USER = var.vm_user
     HELLO = "Hello world!"
-    # KEY = var.vm_publickey
-  }
+    }
 }
 
 resource "esxi_guest" "Default" {

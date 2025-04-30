@@ -35,15 +35,6 @@ variable "disk_store" {
 variable "vm_hostname" {
   default = "vmtest3004"
 }
-variable "vm_hostname2" {
-  default = "vmtest0105"
-}
 variable "vm_user" {
   default = "admin"
-}
-variable "vm_publickey" {
-  default = ["ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHLj0QW8VQfxx9mUMdZevTxPif3fw0VavPP1noc4kgBc student@devhost"]
-}
-variable "vm_userconfigfile" {
-  type =string
 }
