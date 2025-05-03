@@ -142,23 +142,3 @@ custom_data = base64encode(file("${var.customdatafile2}"))
   }
 }
 # outputs zijn gedfinieerd in outputs.tf
-# fix voor lege public ip adress outputvelden
-# https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/data-sources/public_ip.html
-
-data "azurerm_public_ip" "pip" {
-  name                = azurerm_public_ip.pip.name
-  resource_group_name = azurerm_linux_virtual_machine.main.resource_group_name
-}
-
-output "public_ip_addressVM1" {
-  value = data.azurerm_public_ip.pip.ip_address
-}
-
-data "azurerm_public_ip" "pip2" {
-  name                = azurerm_public_ip.pip2.name
-  resource_group_name = azurerm_linux_virtual_machine.main2.resource_group_name
-}
-
-output "public_ip_addressVM2" {
-  value = data.azurerm_public_ip.pip2.ip_address
-}

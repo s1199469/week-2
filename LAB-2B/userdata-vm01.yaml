@@ -1,0 +1,18 @@
+#cloud-config
+# gebruiker aanmaken:
+# -default moet erin staan omdat anders de adminuser wordt verwijderd en SSH niet mogelijk is
+users:
+  - default
+  - name: iac
+    gecos: Infra As Code
+    primary_group: iac
+    groups: users
+# custom commands:
+
+runcmd:
+  - echo "cloudinit log" >/root/cloudinit.log
+  - echo "=============" >/root/cloudinit.log
+  - hostnamectl set-hostname s1199469-vm01azure
+  - hostname >>/root/cloudinit.log
+  - date >>/root/cloudinit.log
+  - echo "Hello World" >>/home/iac/hello.txt

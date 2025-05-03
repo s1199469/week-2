@@ -1,4 +1,9 @@
 #cloud-config
+
+packages:
+  - wget
+  - ntpdate
+
 users:
   - default
   - name: ${USER}

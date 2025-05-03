@@ -7,3 +7,11 @@ ESXi deployment gebruikt de volgende files:
 de volgende variabelen zijn toegevoegd:
 - vm_memsize
 - vm_numvcpus
+- count
+
+# issues
+- count = 2 maakt twee VM's aan in ESXi. Omdat deze dezelfde naam hebben kan er maar eentje worden gestart. Als de eerste is uitgezet en de tweede start dan krijgt die geen IP adres van DHCP. 
+- IP adres verkrijgen van pfsense lijkt soms niet te werken. In pfsense de DHCP service omgezet cabn ISC naar KEA. 
+
+# status
+- de in het lab gevraagde VM's worden aangemaakt. Ze zijn toegankelijk met SSH met de admin user + public key. wget en ntptime staan er op.
