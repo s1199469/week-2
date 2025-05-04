@@ -10,16 +10,16 @@ de volgende variabelen zijn toegevoegd:
 - count
 
 # issues
-- count = 2 maakt twee VM's aan in ESXi. Omdat deze dezelfde naam hebben kan er maar eentje worden gestart. Als de eerste is uitgezet en de tweede start dan krijgt die geen IP adres van DHCP. 
+- count = 2 maakt twee VM's aan in <ins>ESXi</ins>. Omdat deze dezelfde naam hebben kan er maar eentje worden gestart. Als de eerste is uitgezet en de tweede start dan krijgt die geen IP adres van DHCP. 
 - IP adres verkrijgen van pfsense lijkt soms niet te werken. In pfsense de DHCP service omgezet cabn ISC naar KEA. 
 
 # status
 - de in het lab gevraagde VM's worden aangemaakt. Ze zijn toegankelijk met SSH met een met cloud-init aangemaakte admin user + public key. wget en ntptime zijn door cloud-init toegevoegd.
 
 # opdracht voor video
-gevraagd wordt om een SSH verbinding op te zetten van een VM uit opdracht 2A (op ESX gehoste VM) naar de Azure hosted VM.
-De private key kan vanaf het beheerstation naar de remote server worden gekopieerd met de private key van de admin user. Gebruik hiervoor het scp commando:
-** student@devhost:~$ scp /home/student/.ssh/IACLab2key.pem adminuser@192.168.1.50 (=voorbeeldadres):/home/adminuser/.ssh/
+gevraagd wordt om een SSH verbinding op te zetten van een <ins>VM uit opdracht 2A (op ESX gehoste VM)</ins> naar de <ins>Azure hosted VM</ins>.
+De private key kan vanaf het beheerstation naar de remote server worden gekopieerd met de <ins>private key van de admin user</ins>. Gebruik hiervoor het scp commando:
+**student@devhost:~$ scp /home/student/.ssh/IACLab2key.pem adminuser@192.168.1.50 (=voorbeeldadres):/home/adminuser/.ssh/**
 * maak een SSH verbinding met de server met ssh -i ~/.ssh/id-ed25519 adminuser@192.168.1.50
 * maak vervolgens vanuit de remote host een ssh-verbinding met de Azure hosted remote server:
-ssh -i ~/.ssh/IACLab2key.pem adminuser@<public ip adres van remote server>
+**ssh -i ~/.ssh/IACLab2key.pem adminuser@<public __ip adres van remote server>__**
