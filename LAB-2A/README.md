@@ -17,3 +17,16 @@ de volgende variabelen zijn toegevoegd:
 ## status
 - de in het lab gevraagde VM's worden aangemaakt. Ze zijn toegankelijk met SSH met een met cloud-init aangemaakte admin user + public key. wget en ntptime zijn door cloud-init toegevoegd.
 
+## wegschrijven IP adressen in ansible inventory file
+methode:
+
+locals {
+  ips = [esxi_guest.Default[0].ip_address,esxi_guest.Default[1].ip_address,esxi_guest.Default2[0].ip_address]
+}
+resource "local_file" "ipaddresses" {
+   content = <<-EOT
+   [webservers]
+   %{ for ip in local.ips }${ip}
+   %{ endfor }
+   [databaseservers]
+   EOT

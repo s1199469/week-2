@@ -77,7 +77,21 @@ ovf_source = "https://cloud-images.ubuntu.com/releases/24.04/release/ubuntu-24.0
   # "userdata.encoding" = "base64"
   }
 }
-#
+
+# wegschrijven IP adressen in file
+locals {
+  ips = [esxi_guest.Default[0].ip_address,esxi_guest.Default[1].ip_address,esxi_guest.Default2[0].ip_address]
+}
+resource "local_file" "ipaddresses" {
+   content = <<-EOT
+   [webservers]
+   %{ for ip in local.ips }${ip}
+   %{ endfor }
+   [databaseservers]
+   EOT
+
+   filename = "${path.module}/inventory.ini"
+}
 #  Outputs are a great way to output information about your apply.
 #
 
