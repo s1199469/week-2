@@ -1,4 +1,4 @@
-# WEEK 2 - LAB 2B
+# WEEK 2 - OPDRACHT 1
 ## Algemene informatie
 ESXi deployment gebruikt de volgende files:
 - main.tf
