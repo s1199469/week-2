@@ -8,3 +8,4 @@ De private key kan vanaf het beheerstation naar de remote server worden gekopiee
 **ssh -i ~/.ssh/IACLab2key.pem adminuser@_<public_ip adres van remote server>_**
 ## toevoegen ontwerptekening
 * 12-05-2025: Excelidraw file toegevoegd
+* ![./Lab2-VMs.png]
