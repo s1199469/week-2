@@ -21,12 +21,21 @@ de volgende variabelen zijn toegevoegd:
 methode:
 
 locals {
+
   ips = [esxi_guest.Default[0].ip_address,esxi_guest.Default[1].ip_address,esxi_guest.Default2[0].ip_address]
+
 }
-resource "local_file" "ipaddresses" {
-   content = <<-EOT
+
+resource "local_file" "ipaddresses" { 
+   
+   content = <<-EOT <br>
+   
    [webservers]
+   
    %{ for ip in local.ips }${ip}
+   
    %{ endfor }
+   
    [databaseservers]
+   
    EOT
