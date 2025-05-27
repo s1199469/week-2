@@ -1,4 +1,4 @@
-# WEEK 2 - LAB 2B
+# WEEK 2 - OPDRACHT 2
 ## Azure VM deployment
 * VM's krijgen standaard <ins>geen public IP</ins> meer. Daarom heb ik een resource moeten toevoegen. Deze is terug te vinden in de azurerm provider documentatie. 
 
