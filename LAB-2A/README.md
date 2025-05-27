@@ -39,3 +39,5 @@ resource "local_file" "ipaddresses" {
    [databaseservers]
    
    EOT
+
+filename = "${path.module}/inventory.ini"
