@@ -1,15 +1,13 @@
 # WEEK 2 - OPDRACHT 1
 ------
-## Algemene informatie
-ESXi deployment gebruikt de volgende files:
-- main.tf
-- variables.tf
-- vm-1.tpl
-- vm-1.tfvars
-de volgende variabelen zijn toegevoegd:
-- vm_memsize
-- vm_numvcpus
-- count
+maak 2 Virtuele Machines in ESXi met:
+
+- automatische gegenereerde Ansible inventory
+- gebruink cloud-init
+- installeer wget en ntptime met cloud-init
+- voeg een admin gebruiker toe met cloud-init
+- voeg ssh
+
 -----
 ## issues
 - count = 2 maakt twee VM's aan in <ins>ESXi</ins>. Omdat deze dezelfde naam hebben kan er maar eentje worden gestart. Als de eerste is uitgezet en de tweede start dan krijgt die geen IP adres van DHCP. 
