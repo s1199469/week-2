@@ -17,7 +17,8 @@ De private key kan vanaf het beheerstation naar de remote server worden gekopiee
 ----
 ## status
 
-ssh verbinding kan succesvol tot stand worden gebracht
+- ssh verbinding kan succesvol tot stand worden gebracht
+- video aangeleverd in Brightspace
 
 ---
 
