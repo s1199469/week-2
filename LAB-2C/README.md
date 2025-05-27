@@ -9,4 +9,4 @@ De private key kan vanaf het beheerstation naar de remote server worden gekopiee
 ## toevoegen ontwerptekening
 * 12-05-2025: Excelidraw file toegevoegd
 
-![Ontwerp](Lab2-VMs.png)
+![Ontwerp](lab2-VMs.png)
