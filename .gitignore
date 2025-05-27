@@ -1,5 +1,6 @@
 # ignore folders
 backup/
 TEST/
+# ignore file extensions
 *.pem
 *.bak
