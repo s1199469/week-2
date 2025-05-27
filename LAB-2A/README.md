@@ -20,24 +20,24 @@ de volgende variabelen zijn toegevoegd:
 ## wegschrijven IP adressen in ansible inventory file
 methode: uitvoer in een array met variabelen die de waarde van de ip adressen bevatten. Met de terraform __local_file__ resource kan een tekstfile worden aangemaakt, in dit geval inventory.ini 
 
-locals {
-
-  ips = [esxi_guest.Default[0].ip_address,esxi_guest.Default[1].ip_address,esxi_guest.Default2[0].ip_address]
-
-}
-
-resource "local_file" "ipaddresses" { 
+> locals {
+>
+>  ips = [esxi_guest.Default[0].ip_address,esxi_guest.Default[1].ip_address,esxi_guest.Default2[0].ip_address]
+>
+> }
+>
+>resource "local_file" "ipaddresses" { 
    
-   content = <<-EOT <br>
+>   content = <<-EOT <br>
    
-   [webservers]
+>   [webservers]
    
-   %{ for ip in local.ips }${ip}
+>   %{ for ip in local.ips }${ip}
    
-   %{ endfor }
+>   %{ endfor }
+  
+ >  [databaseservers]
    
-   [databaseservers]
-   
-   EOT
-
-filename = "${path.module}/inventory.ini"
+ >  EOT
+>
+>filename = "${path.module}/inventory.ini"
