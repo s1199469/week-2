@@ -1,12 +1,16 @@
-# WEEK 2 - OPDRACHT 1
-------
-maak 2 Virtuele Machines in ESXi met:
+# WEEK 2 - OPDRACHT 2A
 
-- automatische gegenereerde Ansible inventory
-- gebruink cloud-init
-- installeer wget en ntptime met cloud-init
-- voeg een admin gebruiker toe met cloud-init
-- voeg ssh
+------
+maak 3 Virtuele Machines in ESXi:
+
+- 2x met de naam "webserver", 1x met de naam "databaseserver"
+- met een automatische gegenereerde Ansible inventory
+- met gebruik van cloud-init voor configuratie met shell commando's
+- met wget en ntptime, geïnstalleerd met cloud-init
+- met een admin gebruiker, toegevoegd met cloud-init
+- met ssh public key, toegevoegd met cloud-init
+
+Dit alles moet zoveel mogelijk gebruik van viariabelen
 
 -----
 ## issues
