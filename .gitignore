@@ -5,3 +5,4 @@ TEST/
 # ignore file extensions
 *.pem
 *.bak
+providers.tf
